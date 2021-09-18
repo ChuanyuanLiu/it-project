@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head> <title>Dashboard</title> 
+    <style>
+      /* cell border and spacing */
+      td, th {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      /* header and every even row to be grey */
+      tr:nth-child(even), th {
+        background-color: lightgrey;
+      }
+      form > * {
+        margin: 5px;
+      }
+      input[type=submit] {
+        margin-left: 40px;
+      }
+      /* horizontally center the html body */
+      html {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+    <form action="./" method="GET">
+      Name: <input type="text" name="name"> </br>
+      Order by: <select name="order">
+                  <option value="desc">latest</option>
+                  <option value="asc">oldest</option>
+                </select> 
+      <input type="submit" value="search">
+    </form>
+    <table>
+      <thead>
+        <tr> <th>Name</th> <th>Date Created</th> </tr>
+      </thead>
+      <tbody>
+        <tr> <td>Alice</td> <td>Wednesday 01/12/2021</td> </tr>
+        <tr> <td>Bob</td> <td>Monday 04/10/2021</td> </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
