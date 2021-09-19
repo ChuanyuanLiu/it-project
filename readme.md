@@ -2,6 +2,7 @@
 
 * Python 3.9+
 * Firefox 90+
+* Cypress 8.4.1
 
 ## To run
 
