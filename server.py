@@ -31,10 +31,10 @@ def response_builder(path: list, params: dict) -> str:
 
 def get_param(request: str) -> dict:
     params = dict()
-    path = request.split('\n')[0].split()[1] # as defined by http protocol
-    param = re.search('.*\?(.*)', path)
-    # let us ignore escape code as defined here for now https://www.december.com/html/spec/esccodes.html
     try:
+        path = request.split('\n')[0].split()[1] # as defined by http protocol
+        param = re.search('.*\?(.*)', path)
+        # let us ignore escape code as defined here for now https://www.december.com/html/spec/esccodes.html
         if param is not None:
             for value_pair in param.group(1).split('&'):
                 key, value = value_pair.split('=')
@@ -46,8 +46,12 @@ def get_param(request: str) -> dict:
         return params
 
 def get_path(request: str) -> list:
-    path = request.split('\n')[0].split()[1].split('?')[0]
-    return path.split('/')
+    try:
+        path = request.split('\n')[0].split()[1].split('?')[0]
+        return path.split('/')
+    except Exception as e:
+        print('Error: malformed url: ', e)
+        return [""]
 
 ################# Server Config #######################
 

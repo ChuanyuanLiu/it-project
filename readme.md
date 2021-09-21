@@ -8,13 +8,16 @@
 
 1. `python server.py`
 2. Access `localhost:3000` using any browser
+3. npm install
+4. npx cypress open
 
 ## Client's Requirement
-
+- The client uses an iPhone 6
 - The client wants a simple dashboard to display a list of contacts that can be sorted by date created and searched by names.
 
 ## User Stories
 
+**contact list Epic**
 - As a user
   - I want to see everyone in my contact list, so that I don't forget people's names.
   - I want to sort contacts by the date I meet them, so I can group together those I meet on the same day.

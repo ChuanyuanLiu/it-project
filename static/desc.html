@@ -4,14 +4,16 @@
     <link href="style.css" rel="stylesheet" >
   </head>
   <body>
-    <h1>Dashboard</h1>
+    <h1 cy-data='header'>Bob's contacts</h1>
     <form action="./" method="GET">
-      Name: <input type="text" name="name"> </br>
-      Order by: <select name="order">
+      <label cy-data="name-label" for="name">Name:</label> 
+      <input cy-data="name-input" type="text" name="name"> </br>
+      <label cy-data="order-label" for="order">Order by: </label>
+      <select cy-data="order-input" name="order">
                   <option value="desc">latest</option>
                   <option value="asc">oldest</option>
                 </select> 
-      <input type="submit" value="search">
+      <input cy-data="submit-button" type="submit" value="search">
     </form>
     <table>
       <thead>

@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head> <title>Dashboard</title> 
-    <link rel="stylesheet" href="./style.css">
+    <link href="./style.css" rel="stylesheet" >
   </head>
   <body>
-    <h1>Dashboard</h1>
+    <h1 cy-data='header'>Bob's Contacts</h1>
     <form action="./" method="GET">
-      Name: <input type="text" name="name"> </br>
-      Order by: <select name="order">
+      <label cy-data="name-label" for="name">Name:</label> 
+      <input cy-data="name-input" type="text" name="name"> </br>
+      <label cy-data="order-label" for="order">Order by: </label>
+      <select cy-data="order-input" name="order">
                   <option value="asc">oldest</option>
                   <option value="desc">latest</option>
                 </select> 
-      <input type="submit" value="search">
+      <input cy-data="submit-button" type="submit" value="search">
     </form>
     <table>
       <thead>
